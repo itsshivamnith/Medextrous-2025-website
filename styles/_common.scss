@@ -1,0 +1,177 @@
+@import "function";
+
+.title-logo {
+  font-size: 43px;
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  text-align: center; 
+}
+
+.title-logo span {
+  font-size: 35px;
+  -webkit-text-stroke: 1px #00dc93;
+  color: #00dc93;
+}
+
+
+@media (max-width: 1024px) {
+  .title-logo {
+    font-size: 35px;
+    -webkit-text-stroke: 0.8px #ffffff;
+    color: transparent;
+    animation: back 20s linear infinite;
+  }
+
+  .title-logo span {
+    font-size: 28px;
+    -webkit-text-stroke: 0.8px #00dc93;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-logo {
+    font-size: 28px;
+    -webkit-text-stroke: 0.6px #ffffff;
+  }
+
+  .title-logo span {
+    font-size: 22px;
+    -webkit-text-stroke: 0.6px #00dc93;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-logo {
+    font-size: 24px;
+    -webkit-text-stroke: 0.5px #ffffff;
+  }
+
+  .title-logo span {
+    font-size: 18px;
+    -webkit-text-stroke: 0.5px #00dc93;
+  }
+}
+
+.logobg {
+  font-size: 60px;
+  span {
+    font-size: 50px;
+  }
+}
+.titleSm {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  background: $gradient2;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.title-bg {
+  font-size: 40px;
+}
+
+.heading-title {
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+  padding-top: $xll-3;
+  padding-bottom: $xl-4;
+  p {
+    margin: $xl-6 0;
+    color: rgba($white, 0.5);
+  }
+}
+
+
+
+
+// CARD STYLES
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px; /* Increased card size */
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #a6cee7;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+
+    img {
+      width: 300px;
+      height: 381.4px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      .icon {
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+
+        &.linkedin:hover {
+          color: #0077b5;
+        }
+
+        &.instagram:hover {
+          color: #e4405f;
+        }
+      }
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+  }
+
+  .card-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .title-link {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+    }
+  }
+}
